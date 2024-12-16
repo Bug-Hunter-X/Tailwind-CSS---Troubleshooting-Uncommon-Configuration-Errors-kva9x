@@ -1,0 +1,13 @@
+/* bug.css */
+.my-class {
+  @apply text-blue-500; /*Typo: should be text-blue-500*/ 
+  @apply bg-gray-200; /*Class might not be purged*/
+}
+
+/* bugSolution.css */
+.my-class {
+  @apply text-blue-500;
+  @apply bg-gray-200;
+}
+
+/* Ensure `tailwind.config.js` includes `bg-gray-200`  and that the purge settings are correct if using purge. */
